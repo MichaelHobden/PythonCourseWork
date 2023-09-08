@@ -6,7 +6,7 @@ user1 = {
 
 def authenticated(fn):
     def wrapper(*args, **kwargs):
-        if user1["valid"]:
+        if args[0]["valid"]:
             fn(*args, **kwargs)
 
     return wrapper
